@@ -76,3 +76,20 @@ export const hasRole = (role) => {
   const user = getCurrentUser();
   return user && user.role === role;
 }; 
+
+export const register = async (userData) => {
+  // Simulate API delay
+  await new Promise(resolve => setTimeout(resolve, 500));
+
+  // Mock new user creation
+  const newUser = {
+    ...userData,
+    id: Date.now().toString(),
+    name: `${userData.firstName} ${userData.lastName}`
+  };
+
+  // Save to localStorage
+  localStorage.setItem('user', JSON.stringify(newUser));
+
+  return newUser;
+};

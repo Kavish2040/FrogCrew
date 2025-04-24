@@ -1,13 +1,13 @@
 <template>
-  <div class="home-container">
-    <header class="hero">
-      <h1>Welcome to FrogCrew</h1>
-      <p>Streamlining crew scheduling for TCU sporting events</p>
-      <div class="cta-buttons">
-        <router-link to="/login" class="btn btn-primary">Login</router-link>
+  <MainLayout>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to FrogCrew</h1>
+        <p>Streamlining crew scheduling for TCU sporting events</p>
+        <router-link to="/login" class="btn-primary">Login</router-link>
       </div>
-    </header>
-    
+    </section>
+
     <section class="features">
       <h2>Key Features</h2>
       <div class="feature-grid">
@@ -17,109 +17,120 @@
         </div>
         <div class="feature-card">
           <h3>Crew Management</h3>
-          <p>Easily manage crew profiles, qualifications, and pay rates</p>
+          <p>Manage crew profiles, qualifications, and assignments with ease</p>
         </div>
         <div class="feature-card">
           <h3>Availability Tracking</h3>
-          <p>Let crew members submit their availability for specific games</p>
+          <p>Allow crew members to submit their availability for games</p>
         </div>
         <div class="feature-card">
           <h3>Streamlined Notifications</h3>
-          <p>Centralized notifications for assignments and schedule changes</p>
+          <p>Stay updated on assignments and schedule changes</p>
         </div>
       </div>
     </section>
-  </div>
+  </MainLayout>
 </template>
 
 <script setup>
-// Home page component logic
+import MainLayout from '../layouts/MainLayout.vue';
 </script>
 
 <style scoped>
-.home-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.hero-section {
+  height: 80vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9), 
+      rgba(255, 255, 255, 0.6)
+    ), 
+    url('@/assets/images/superfrog.jpg'); /* ← Make sure this path is correct */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero-content {
+  max-width: 700px;
   padding: 2rem;
 }
 
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  margin-bottom: 3rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  color: #4F2683; /* TCU Purple */
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: var(--tcu-purple);
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
   margin-bottom: 1rem;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--text-dark);
+  font-weight: 400;
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
 .btn-primary {
-  background-color: #4F2683; /* TCU Purple */
+  background-color: var(--tcu-purple);
   color: white;
+  padding: 0.7rem 1.4rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #3a1c60;
+  background-color: var(--tcu-dark-purple);
 }
 
 .features {
-  margin-top: 3rem;
+  padding: 4rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .features h2 {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #333;
+  margin-bottom: 2.5rem;
+  color: var(--tcu-purple);
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
 .feature-card {
   background-color: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  text-align: left;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .feature-card h3 {
-  color: #4F2683; /* TCU Purple */
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  color: var(--tcu-purple);
 }
 
 .feature-card p {
-  color: #666;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
-</style> 
+</style>

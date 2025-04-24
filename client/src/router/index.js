@@ -2,12 +2,15 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // Import pages
 import Home from '../pages/Home.vue';
+import CrewProfile from '../pages/CrewProfile.vue';
 import Login from '../pages/Login.vue';
+import Register from '../pages/Register.vue';
 import Dashboard from '../pages/Dashboard.vue';
 import NotFound from '../pages/NotFound.vue';
+import Crew from '../pages/Crew.vue';
 
 // Define routes
-const routes = [
+const routes = [  
   {
     path: '/',
     name: 'Home',
@@ -18,6 +21,24 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login,
+    meta: { requiresAuth: false }
+  },
+  {
+    path: '/crew',
+    name: 'Crew',
+    component: Crew,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/crew-profile/:id',
+    name: 'CrewProfile',
+    component: () => import('../pages/CrewProfile.vue'),
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register,
     meta: { requiresAuth: false }
   },
   {

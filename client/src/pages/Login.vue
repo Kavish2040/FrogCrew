@@ -95,6 +95,7 @@ const handleLogin = async () => {
 .login-header h1 {
   margin: 0;
   font-size: 1.8rem;
+  color:#f5f5f5
 }
 
 .login-header p {

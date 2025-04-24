@@ -13,10 +13,10 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <router-link to="/crew" class="active">
               <span class="icon">👥</span>
               <span>Crew Members</span>
-            </a>
+            </router-link>
           </li>
           <li>
             <a href="#">
@@ -222,6 +222,7 @@ const handleLogout = () => {
 }
 
 .user-info {
+  margin-left: 2em;
   color: #666;
 }
 
