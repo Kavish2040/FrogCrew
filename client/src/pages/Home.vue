@@ -40,10 +40,10 @@ import MainLayout from '../layouts/MainLayout.vue';
 .hero-section {
   height: 80vh;
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.9), 
-      rgba(255, 255, 255, 0.6)
+      rgba(255, 255, 255, 0.7), 
+      rgba(255, 255, 255, 0.5)
     ), 
-    url('@/assets/images/superfrog.jpg'); /* ← Make sure this path is correct */
+    url('/src/assets/images/superfrog.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
