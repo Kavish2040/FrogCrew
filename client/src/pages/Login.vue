@@ -85,7 +85,7 @@ const handleLogin = async () => {
 }
 
 .login-header {
-  background-color: #4F2683; /* TCU Purple */
+  background-color: #4F2683;
   color: white;
   padding: 1.5rem;
   text-align: center;

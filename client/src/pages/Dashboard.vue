@@ -7,46 +7,39 @@
       <nav class="sidebar-nav">
         <ul>
           <li>
-            <a href="#" class="active">
-              <span class="icon">📊</span>
+            <router-link to="/dashboard" class="active">
               <span>Dashboard</span>
-            </a>
+            </router-link>
           </li>
           <li>
             <router-link to="/crew" class="active">
-              <span class="icon">👥</span>
               <span>Crew Members</span>
             </router-link>
           </li>
           <li>
             <router-link to="/games" class="active">
-              <span class="icon">🏆</span>
               <span>Games</span>
             </router-link>
           </li>
-          <li>
-            <a href="#">
-              <span class="icon">📅</span>
-              <span>Schedules</span>
-            </a>
+          <li v-if="userStore.isAdmin">
+            <router-link to="/schedulecrew" class="active">
+              <span>Schedule Crew</span>
+            </router-link>
           </li>
-          <li>
-            <a href="#">
-              <span class="icon">📋</span>
-              <span>Positions</span>
-            </a>
+          <li v-if="userStore.isAdmin">
+            <router-link to="/createschedule" class="active">
+              <span>Create Game Schedule</span>
+            </router-link>
           </li>
-          <li>
-            <a href="#">
-              <span class="icon">📝</span>
-              <span>Templates</span>
-            </a>
+          <li v-if="userStore.isAdmin">
+            <router-link to="/addgame" class="active">
+              <span>Add Games</span>
+            </router-link>
           </li>
-          <li>
-            <a href="#">
-              <span class="icon">📊</span>
-              <span>Reports</span>
-            </a>
+          <li v-if="userStore.isAdmin">
+            <router-link to="/invite" class="active">
+              <span>Invite Crew</span>
+            </router-link>
           </li>
         </ul>
       </nav>
@@ -57,7 +50,7 @@
         </button>
       </div>
     </aside>
-    
+
     <main class="main-content">
       <header class="content-header">
         <h1>Dashboard</h1>
@@ -65,37 +58,40 @@
           <span>Welcome, {{ userStore.userName }}</span>
         </div>
       </header>
-      
+
       <div class="dashboard-grid">
+        <!-- Card for Games -->
         <div class="dashboard-card">
           <h3>Upcoming Games</h3>
           <div class="card-content">
-            <p class="empty-state">No upcoming games scheduled</p>
-            <button class="btn-action">Add Game</button>
+            <router-link to="/games" class="btn-action">View Games</router-link>
+            <router-link v-if="userStore.isAdmin" to="/addgame" class="btn-action">Add Game</router-link>
           </div>
         </div>
-        
+
+        <!-- Card for Crew -->
         <div class="dashboard-card">
           <h3>Crew Members</h3>
           <div class="card-content">
-            <p class="empty-state">No crew members added yet</p>
-            <button class="btn-action">Invite Crew</button>
+            <router-link to="/crew" class="btn-action">View Crew List</router-link>
+            <router-link v-if="userStore.isAdmin" to="/invite" class="btn-action">Invite Crew Member</router-link>
           </div>
         </div>
-        
+
+        <!-- Card for Availability -->
         <div class="dashboard-card">
-          <h3>Recent Activity</h3>
+          <h3>Availability</h3>
           <div class="card-content">
-            <p class="empty-state">No recent activity</p>
+            <router-link to="/availability" class="btn-action">Submit Availability</router-link>
           </div>
         </div>
-        
-        <div class="dashboard-card">
-          <h3>Quick Actions</h3>
+
+        <!-- Admin Only Card -->
+        <div class="dashboard-card" v-if="userStore.isAdmin">
+          <h3>Admin Actions</h3>
           <div class="card-content actions-list">
-            <button class="btn-action">Create Game Schedule</button>
-            <button class="btn-action">View Crew Availability</button>
-            <button class="btn-action">Generate Reports</button>
+            <router-link to="/createschedule" class="btn-action">Create Game Schedule</router-link>
+            <router-link to="/schedulecrew" class="btn-action">Schedule Crew</router-link>
           </div>
         </div>
       </div>

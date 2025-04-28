@@ -10,6 +10,12 @@ import NotFound from '../pages/NotFound.vue';
 import Crew from '../pages/Crew.vue';
 import GameSchedule from '../pages/GameSchedule.vue';
 import CrewList from '../pages/CrewList.vue';
+import Availability from '../pages/Availability.vue';
+import Invite from '../pages/Invite.vue';
+import CreateSchedule from '../pages/CreateSchedule.vue';
+import AddGame from '../pages/AddGame.vue';
+import ScheduleCrew from '../pages/ScheduleCrew.vue';
+
 
 // Define routes
 const routes = [  
@@ -65,6 +71,36 @@ const routes = [
     component: Dashboard,
     meta: { requiresAuth: true }
   },
+  {
+    path: '/availability',
+    name: 'Availability',
+    component: Availability,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/invite',
+    name: 'Invite',
+    component: Invite,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/createschedule',
+    name: 'CreateSchedule',
+    component: CreateSchedule,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/addgame',
+    name: 'AddGame',
+    component: AddGame,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/schedulecrew',
+    name: 'ScheduleCrew',
+    component: ScheduleCrew,
+    meta: { requiresAuth: true }
+  },  
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
