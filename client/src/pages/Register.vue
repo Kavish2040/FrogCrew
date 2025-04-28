@@ -122,7 +122,6 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
     padding: 2rem;
   }
   
@@ -131,7 +130,7 @@
     max-width: 500px;
     background: white;
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 1px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
@@ -156,7 +155,7 @@
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 1px;
   }
   
   .error-message {
@@ -170,7 +169,7 @@
     color: white;
     padding: 0.75rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 1px;
     font-weight: bold;
     cursor: pointer;
   }

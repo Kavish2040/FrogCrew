@@ -15,7 +15,7 @@
   import { ref, onMounted } from 'vue';
   import { useRoute } from 'vue-router';
   
-  // This would typically fetch from an API. For now, mock data:
+  //mock data
   const mockProfiles = [
     {
       id: '1',
@@ -68,7 +68,7 @@
     max-width: 500px;
     background: #fff;
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 1px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   

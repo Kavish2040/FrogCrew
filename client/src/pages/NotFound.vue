@@ -19,7 +19,6 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f5f5;
   padding: 1rem;
 }
 
@@ -27,7 +26,7 @@
   text-align: center;
   padding: 3rem;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 1px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 500px;
 }
@@ -56,7 +55,7 @@ p {
   background-color: #4F2683; /* TCU Purple */
   color: white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 1px;
   font-weight: 500;
   transition: background-color 0.3s;
 }

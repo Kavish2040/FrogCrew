@@ -1,31 +1,25 @@
-/* === Import font === */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
   --tcu-purple: #4F2683;
   --tcu-dark-purple: #3a1c60;
   --accent-pink: #ffb6c1;
-  --bg-light: #f9f9f9;
+  --bg-light-purple: #f7f4fa; /* 🟣 Light soft purple background */
   --text-dark: #2c2c2c;
   --text-muted: #666;
-  --card-radius: 12px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --font-base: 'Poppins', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --card-radius: 0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --font-base: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
-
-/* === Base Styles === */
 
 body {
   margin: 0;
   font-family: var(--font-base);
-  background-color: var(--bg-light);
+  background-color: var(--bg-light-purple);
   color: var(--text-dark);
-  background-image: url('/images/superfrog.jpg'); /* replace if needed */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  min-height: 100vh;
 }
+
 
 a {
   color: var(--tcu-purple);

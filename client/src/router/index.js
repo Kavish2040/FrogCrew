@@ -8,6 +8,8 @@ import Register from '../pages/Register.vue';
 import Dashboard from '../pages/Dashboard.vue';
 import NotFound from '../pages/NotFound.vue';
 import Crew from '../pages/Crew.vue';
+import GameSchedule from '../pages/GameSchedule.vue';
+import CrewList from '../pages/CrewList.vue';
 
 // Define routes
 const routes = [  
@@ -29,6 +31,22 @@ const routes = [
     component: Crew,
     meta: { requiresAuth: true }
   },
+  { path: '/games', 
+    name: 'GameSchedule', 
+    component: GameSchedule, 
+    meta: { requiresAuth: true } 
+  },
+  { path: '/crewlist', 
+    name: 'CrewList', 
+    component: CrewList, 
+    meta: { requiresAuth: true } 
+  },
+  {
+    path: '/crewlist/:gameId',
+    name: 'CrewList',
+    component: () => import('../pages/CrewList.vue'),
+    meta: { requiresAuth: true }
+  },  
   {
     path: '/crew-profile/:id',
     name: 'CrewProfile',

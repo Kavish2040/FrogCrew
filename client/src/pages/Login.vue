@@ -72,7 +72,6 @@ const handleLogin = async () => {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f5f5;
   padding: 1rem;
 }
 
@@ -80,7 +79,7 @@ const handleLogin = async () => {
   width: 100%;
   max-width: 400px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 1px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -122,7 +121,7 @@ const handleLogin = async () => {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 1px;
   font-size: 1rem;
 }
 
@@ -138,7 +137,7 @@ const handleLogin = async () => {
   background-color: #4F2683; /* TCU Purple */
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 1px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;

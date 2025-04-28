@@ -65,7 +65,7 @@
     border: 1px solid #ddd;
     padding: 1rem;
     margin-bottom: 1rem;
-    border-radius: 8px;
+    border-radius: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,7 +91,7 @@
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 1px;
     cursor: pointer;
   }
   

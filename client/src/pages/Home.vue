@@ -1,7 +1,7 @@
 <template>
   <MainLayout>
     <section class="hero-section">
-      <div class="hero-content">
+      <div class="hero-text">
         <h1>Welcome to FrogCrew</h1>
         <p>Streamlining crew scheduling for TCU sporting events</p>
         <router-link to="/login" class="btn-primary">Login</router-link>
@@ -39,48 +39,40 @@ import MainLayout from '../layouts/MainLayout.vue';
 <style scoped>
 .hero-section {
   height: 80vh;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7), 
-      rgba(255, 255, 255, 0.5)
-    ), 
-    url('/src/assets/images/superfrog.jpg');
-  background-size: cover;
-  background-position: center;
+  background: url('/src/assets/images/superfrog.jpg') center/cover no-repeat;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 3rem 1rem;
-}
-
-.hero-content {
-  max-width: 700px;
   padding: 2rem;
 }
 
-.hero-content h1 {
-  font-size: 2.8rem;
-  color: var(--tcu-purple);
-  font-weight: 700;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
+.hero-text {
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  color: var(--text-dark);
-  font-weight: 400;
-  line-height: 1.6;
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  color: var(--tcu-purple); /* purple heading */
+}
+
+.hero-text p {
+  font-size: 1.3rem;
   margin-bottom: 2rem;
+  font-weight: 400;
+  color: var(--text-dark); /* black / muted black paragraph */
 }
 
 .btn-primary {
   background-color: var(--tcu-purple);
   color: white;
-  padding: 0.7rem 1.4rem;
-  font-weight: 500;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
   border: none;
-  border-radius: 8px;
+  border-radius: 1;
   font-size: 1rem;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -90,6 +82,7 @@ import MainLayout from '../layouts/MainLayout.vue';
   background-color: var(--tcu-dark-purple);
 }
 
+/* Features Section stays the same */
 .features {
   padding: 4rem 1.5rem;
   max-width: 1200px;
@@ -112,7 +105,7 @@ import MainLayout from '../layouts/MainLayout.vue';
 
 .feature-card {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 1;
   padding: 1.75rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -133,4 +126,5 @@ import MainLayout from '../layouts/MainLayout.vue';
   color: var(--text-muted);
   line-height: 1.5;
 }
+
 </style>

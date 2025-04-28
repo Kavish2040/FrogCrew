@@ -19,10 +19,10 @@
             </router-link>
           </li>
           <li>
-            <a href="#">
+            <router-link to="/games" class="active">
               <span class="icon">🏆</span>
               <span>Games</span>
-            </a>
+            </router-link>
           </li>
           <li>
             <a href="#">
@@ -188,7 +188,7 @@ const handleLogout = () => {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  border-radius: 1px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -204,7 +204,6 @@ const handleLogout = () => {
 
 .main-content {
   flex: 1;
-  background-color: #f5f7fa;
   padding: 2rem;
 }
 
@@ -234,7 +233,7 @@ const handleLogout = () => {
 
 .dashboard-card {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 1px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
@@ -266,7 +265,7 @@ const handleLogout = () => {
   background-color: #4F2683; /* TCU Purple */
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 1px;
   cursor: pointer;
   transition: background-color 0.3s;
   font-weight: 500;
