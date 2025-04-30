@@ -39,7 +39,6 @@ import MainLayout from '../layouts/MainLayout.vue';
 <style scoped>
 .hero-section {
   height: 80vh;
-  background: url('/src/assets/images/superfrog.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,14 +55,14 @@ import MainLayout from '../layouts/MainLayout.vue';
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 800;
-  color: var(--tcu-purple); /* purple heading */
+  color: var(--tcu-purple);
 }
 
 .hero-text p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   font-weight: 400;
-  color: var(--text-dark); /* black / muted black paragraph */
+  color: var(--text-dark);
 }
 
 .btn-primary {
@@ -82,7 +81,6 @@ import MainLayout from '../layouts/MainLayout.vue';
   background-color: var(--tcu-dark-purple);
 }
 
-/* Features Section stays the same */
 .features {
   padding: 4rem 1.5rem;
   max-width: 1200px;

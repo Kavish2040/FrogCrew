@@ -7,37 +7,37 @@
       <nav class="sidebar-nav">
         <ul>
           <li>
-            <router-link to="/dashboard" class="active">
+            <router-link to="/dashboard">
               <span>Dashboard</span>
             </router-link>
           </li>
           <li>
-            <router-link to="/crew" class="active">
+            <router-link to="/crew">
               <span>Crew Members</span>
             </router-link>
           </li>
           <li>
-            <router-link to="/games" class="active">
+            <router-link to="/games">
               <span>Games</span>
             </router-link>
           </li>
           <li v-if="userStore.isAdmin">
-            <router-link to="/schedulecrew" class="active">
+            <router-link to="/schedulecrew">
               <span>Schedule Crew</span>
             </router-link>
           </li>
           <li v-if="userStore.isAdmin">
-            <router-link to="/createschedule" class="active">
+            <router-link to="/createschedule">
               <span>Create Game Schedule</span>
             </router-link>
           </li>
           <li v-if="userStore.isAdmin">
-            <router-link to="/addgame" class="active">
+            <router-link to="/addgame">
               <span>Add Games</span>
             </router-link>
           </li>
           <li v-if="userStore.isAdmin">
-            <router-link to="/invite" class="active">
+            <router-link to="/invite">
               <span>Invite Crew</span>
             </router-link>
           </li>
