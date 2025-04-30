@@ -1,36 +1,18 @@
 <script setup>
-// No imports needed here
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import MainLayout from './layouts/MainLayout.vue';
+
+const route = useRoute();
+
+// Define routes that should NOT have the layout (e.g., login, register, landing page)
+const layoutExcludedRoutes = ['/', '/login', '/register'];
+
+const showLayout = computed(() => !layoutExcludedRoutes.includes(route.path));
 </script>
 
 <template>
-  <router-view />
+  <component :is="showLayout ? MainLayout : 'div'">
+    <router-view />
+  </component>
 </template>
-
-<style>
-/* Global styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f5f5f5;
-}
-
-a {
-  color: #4F2683; /* TCU Purple */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-button {
-  font-family: inherit;
-}
-</style>

@@ -1,39 +1,36 @@
 <template>
-  <MainLayout>
-    <section class="hero-section">
-      <div class="hero-text">
-        <h1>Welcome to FrogCrew</h1>
-        <p>Streamlining crew scheduling for TCU sporting events</p>
-        <router-link to="/login" class="btn-primary">Login</router-link>
-      </div>
-    </section>
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1>Welcome to FrogCrew</h1>
+      <p>Streamlining crew scheduling for TCU sporting events</p>
+      <router-link to="/login" class="btn-primary">Login</router-link>
+    </div>
+  </section>
 
-    <section class="features">
-      <h2>Key Features</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>Automated Scheduling</h3>
-          <p>Replace manual processes with efficient digital scheduling</p>
-        </div>
-        <div class="feature-card">
-          <h3>Crew Management</h3>
-          <p>Manage crew profiles, qualifications, and assignments with ease</p>
-        </div>
-        <div class="feature-card">
-          <h3>Availability Tracking</h3>
-          <p>Allow crew members to submit their availability for games</p>
-        </div>
-        <div class="feature-card">
-          <h3>Streamlined Notifications</h3>
-          <p>Stay updated on assignments and schedule changes</p>
-        </div>
+  <section class="features">
+    <h2>Key Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Automated Scheduling</h3>
+        <p>Replace manual processes with efficient digital scheduling</p>
       </div>
-    </section>
-  </MainLayout>
+      <div class="feature-card">
+        <h3>Crew Management</h3>
+        <p>Manage crew profiles, qualifications, and assignments with ease</p>
+      </div>
+      <div class="feature-card">
+        <h3>Availability Tracking</h3>
+        <p>Allow crew members to submit their availability for games</p>
+      </div>
+      <div class="feature-card">
+        <h3>Streamlined Notifications</h3>
+        <p>Stay updated on assignments and schedule changes</p>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
-import MainLayout from '../layouts/MainLayout.vue';
 </script>
 
 <style scoped>
