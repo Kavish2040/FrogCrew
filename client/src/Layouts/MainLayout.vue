@@ -96,7 +96,7 @@ const handleLogout = () => {
 }
 
 .sidebar {
-  background-color: #2c3e50;
+  background-color: #6a4fa3;
   color: white;
   width: 250px;
   transition: width 0.3s ease;
@@ -111,7 +111,7 @@ const handleLogout = () => {
   position: absolute;
   top: 1rem;
   right: -1.2rem;
-  background: #2c3e50;
+  background-color: #6a4fa3;
   color: white;
   padding: 0.3rem 0.6rem;
   border-radius: 0 4px 4px 0;
